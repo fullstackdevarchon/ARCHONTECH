@@ -54,14 +54,14 @@ function App() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing">
+      {/* <section id="pricing">
         <Pricing />
-      </section>
+      </section> */}
 
-      {/* FAQ Section */}
+      {/* FAQ Section
       <section id="faq">
         <FAQ />
-      </section>
+      </section> */}
 
       {/* Portfolio Section */}
       <section id="portfolio">
@@ -79,9 +79,9 @@ function App() {
       </section>
 
       {/* Clients Section */}
-      <section id="clients">
+      {/* <section id="clients">
         <Clients />
-      </section>
+      </section> */}
 
       {/* Contact Section */}
       <section id="contact">

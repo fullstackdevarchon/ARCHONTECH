@@ -1,111 +1,123 @@
 import React from "react";
-import { Check, Award, ClipboardCheck, Dribbble, Filter, Zap, BadgeCheck } from "lucide-react";
-import featuresImg from "../../../public/assets/img/features.png";
-import altFeaturesImg from "../../../public/assets/img/alt-features.png";
+import { motion } from "framer-motion";
+import {
+  Layout,
+  Smartphone,
+  ShoppingCart,
+  Search,
+  PenTool,
+  Shield,
+  Wrench,
+  FileText,
+  MessageCircle,
+  BarChart3,
+} from "lucide-react";
 
 const Features = () => {
-  const featureItems = [
-    "Eos aspernatur rem",
-    "Facilis neque ipsa",
-    "Volup amet volupt",
-    "Rerum omnis sint",
-    "Alias possimus",
-    "Repellendus molli",
-  ];
-
-  const altFeatures = [
+  // Core Features (10 unique topics)
+  const coreFeatures = [
     {
-      icon: <Award className="w-10 h-10 text-indigo-600" />,
-      title: "Corporis voluptates sit",
-      desc: "Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip",
+      icon: Layout,
+      title: "Custom Website Design",
+      desc: "Tailored designs that perfectly match your brand identity and vision.",
     },
     {
-      icon: <ClipboardCheck className="w-10 h-10 text-indigo-600" />,
-      title: "Ullamco laboris nisi",
-      desc: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt",
+      icon: Smartphone,
+      title: "Responsive & Mobile-Friendly",
+      desc: "Seamless performance and visuals across all devices and screen sizes.",
     },
     {
-      icon: <Dribbble className="w-10 h-10 text-indigo-600" />,
-      title: "Labore consequatur",
-      desc: "Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere",
+      icon: ShoppingCart,
+      title: "E-commerce Solutions",
+      desc: "Secure online stores with integrated payment gateways.",
     },
     {
-      icon: <Filter className="w-10 h-10 text-indigo-600" />,
-      title: "Beatae veritatis",
-      desc: "Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta",
+      icon: Search,
+      title: "SEO Optimization",
+      desc: "Built-in SEO strategies to improve visibility and ranking.",
     },
     {
-      icon: <Zap className="w-10 h-10 text-indigo-600" />,
-      title: "Molestiae dolor",
-      desc: "Et fuga et deserunt et enim. Dolorem architecto ratione tensa raptor marte",
+      icon: PenTool,
+      title: "Branding & UI/UX Design",
+      desc: "Logos, colors, and interfaces designed to attract and engage users.",
     },
     {
-      icon: <BadgeCheck className="w-10 h-10 text-indigo-600" />,
-      title: "Explicabo consectetur",
-      desc: "Est autem dicta beatae suscipit. Sint veritatis et sit quasi ab aut inventore",
+      icon: Shield,
+      title: "Fast & Secure Websites",
+      desc: "Optimized for high performance, cybersecurity, and reliability.",
+    },
+    {
+      icon: Wrench,
+      title: "Maintenance & Support",
+      desc: "Ongoing updates, bug fixes, and full technical support.",
+    },
+    {
+      icon: FileText,
+      title: "CMS Platforms",
+      desc: "Easy-to-use WordPress and CMS solutions for effortless content control.",
+    },
+    {
+      icon: MessageCircle,
+      title: "Social Media Integration",
+      desc: "WhatsApp and social platforms linked directly for customer engagement.",
+    },
+    {
+      icon: BarChart3,
+      title: "Analytics & Reporting",
+      desc: "Track your website performance with in-depth insights and reports.",
     },
   ];
 
   return (
     <>
       {/* Features Section */}
-      <section id="features" className="py-16 bg-gray-50">
-        <div className="container mx-auto px-6 lg:px-20">
-          {/* Section Title */}
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800">Features</h2>
-            <p className="text-gray-600">Our Advanced Features</p>
+      <section
+        id="features"
+        className="py-20 bg-gradient-to-br from-indigo-900 via-indigo-800 to-indigo-700 relative"
+      >
+        <div className="relative container mx-auto px-6 lg:px-20">
+          {/* Title */}
+          <div className="text-center mb-16 text-white">
+            <h2 className="text-4xl font-extrabold">
+              Core Features of{" "}
+              <span className="text-green-400">Archon Tech</span>
+            </h2>
+            <p className="mt-3 text-lg text-gray-200">
+              Discover 10 powerful features designed to grow your business online
+            </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left Image */}
-            <img
-              src={featuresImg}
-              alt="Features"
-              className="rounded-lg shadow-lg"
-            />
-
-            {/* Right Features List */}
-            <div className="grid sm:grid-cols-2 gap-6">
-              {featureItems.map((item, index) => (
-                <div
+          {/* 4-Column Feature Grid */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {coreFeatures.map((feature, index) => {
+              const IconComponent = feature.icon;
+              return (
+                <motion.div
                   key={index}
-                  className="flex items-center bg-white shadow-md p-4 rounded-md transition hover:shadow-xl"
+                  className="flex flex-col h-full bg-white p-6 rounded-2xl shadow-md cursor-pointer"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ type: "spring", stiffness: 200 }}
                 >
-                  <Check className="w-6 h-6 text-indigo-600 mr-3" />
-                  <h3 className="text-base font-semibold text-gray-800">{item}</h3>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+                  {/* Icon with animation */}
+                  <motion.div
+                    whileHover={{ rotate: 10, scale: 1.2 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                  >
+                    <IconComponent className="w-10 h-10 text-indigo-600" />
+                  </motion.div>
 
-      {/* Alt Features Section */}
-      <section id="alt-features" className="py-16 bg-white">
-        <div className="container mx-auto px-6 lg:px-20">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left Features */}
-            <div className="grid sm:grid-cols-2 gap-8">
-              {altFeatures.map((feature, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  {feature.icon}
-                  <div>
-                    <h4 className="text-lg font-bold text-gray-800">
-                      {feature.title}
-                    </h4>
-                    <p className="text-sm text-gray-600">{feature.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+                  {/* Title */}
+                  <h4 className="text-lg font-bold text-gray-800 mt-4">
+                    {feature.title}
+                  </h4>
 
-            {/* Right Image */}
-            <img
-              src={altFeaturesImg}
-              alt="Alt Features"
-              className="rounded-lg shadow-lg"
-            />
+                  {/* Description */}
+                  <p className="text-sm text-gray-600 mt-2 flex-grow">
+                    {feature.desc}
+                  </p>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
