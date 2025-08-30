@@ -73,14 +73,19 @@ const Features = () => {
       {/* Features Section */}
       <section
         id="features"
-        className="py-20 bg-gradient-to-br from-indigo-900 via-indigo-800 to-indigo-700 relative"
+        className="relative py-20 bg-gradient-to-br from-purple-900 via-indigo-800 to-indigo-600 overflow-hidden"
       >
+        {/* Decorative background shapes */}
+        <div className="absolute top-0 left-0 w-72 h-72 bg-pink-500/30 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-10 right-0 w-80 h-80 bg-indigo-400/30 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -top-16 right-1/3 w-64 h-64 bg-green-400/20 rounded-full blur-2xl animate-bounce"></div>
+
         <div className="relative container mx-auto px-6 lg:px-20">
           {/* Title */}
           <div className="text-center mb-16 text-white">
-            <h2 className="text-4xl font-extrabold">
+            <h2 className="text-4xl font-extrabold drop-shadow-lg">
               Core Features of{" "}
-              <span className="text-green-400">Archon Tech</span>
+              <span className="text-pink-400">Archon Tech</span>
             </h2>
             <p className="mt-3 text-lg text-gray-200">
               Discover 10 powerful features designed to grow your business online
@@ -94,7 +99,7 @@ const Features = () => {
               return (
                 <motion.div
                   key={index}
-                  className="flex flex-col h-full bg-white p-6 rounded-2xl shadow-md cursor-pointer"
+                  className="flex flex-col h-full bg-white/90 backdrop-blur-lg p-6 rounded-2xl shadow-xl hover:shadow-2xl cursor-pointer"
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: "spring", stiffness: 200 }}
                 >

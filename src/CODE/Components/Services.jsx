@@ -96,14 +96,14 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="py-20 bg-gradient-to-br from-gray-700 via-gray-600 to-black text-white relative overflow-hidden"
+      className="py-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-fuchsia-800 text-white relative overflow-hidden"
     >
-      {/* Decorative background glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.15),transparent_70%)]"></div>
+      {/* Decorative Background Glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.08),transparent_70%)]"></div>
 
       {/* Section Title */}
       <div className="text-center mb-14 relative z-10">
-        <h2 className="text-4xl font-extrabold text-white tracking-wide drop-shadow-md">
+        <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-wide drop-shadow-lg">
           Our Services
         </h2>
         <p className="text-gray-300 mt-3 text-lg">
@@ -111,22 +111,23 @@ const Services = () => {
         </p>
       </div>
 
+      {/* Services Grid */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-20 relative z-10">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <div key={index} className="perspective">
               <div
-                className={`relative w-full min-h-[340px] h-[360px] sm:h-[380px] transition-transform duration-700 transform-style-preserve-3d ${
+                className={`relative w-full min-h-[360px] h-[380px] transition-transform duration-700 transform-style-preserve-3d ${
                   flipped === index ? "rotate-y-180" : ""
                 }`}
               >
                 {/* Front Side */}
                 <div
-                  className={`absolute inset-0 flex flex-col items-center justify-between text-center p-[2px] rounded-2xl shadow-xl backface-hidden group bg-gradient-to-br ${service.gradient} animate-borderGlow`}
+                  className={`absolute inset-0 flex flex-col items-center justify-between text-center p-[2px] rounded-2xl shadow-2xl backface-hidden group bg-gradient-to-br ${service.gradient} animate-borderGlow`}
                 >
-                  <div className="bg-gray-900 rounded-2xl p-6 sm:p-8 h-full w-full flex flex-col items-center transition-all duration-300 group-hover:bg-gray-800/90">
+                  <div className="bg-gray-900/95 rounded-2xl p-6 sm:p-8 h-full w-full flex flex-col items-center transition-all duration-300 group-hover:bg-gray-800/90">
                     <div
-                      className={`flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br ${service.gradient} shadow-lg mb-5 group-hover:scale-110 transition-transform duration-300`}
+                      className={`flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br ${service.gradient} shadow-xl mb-5 group-hover:scale-110 transition-transform duration-300`}
                     >
                       {service.icon}
                     </div>
@@ -138,7 +139,7 @@ const Services = () => {
                     </p>
                     <button
                       onClick={() => handleToggle(index)}
-                      className="mt-3 inline-flex items-center text-white font-semibold hover:underline"
+                      className="mt-3 inline-flex items-center text-indigo-300 font-semibold hover:underline"
                     >
                       Read More <ArrowRight className="ml-2 w-5 h-5" />
                     </button>
@@ -146,7 +147,7 @@ const Services = () => {
                 </div>
 
                 {/* Back Side */}
-                <div className="absolute inset-0 flex flex-col items-center justify-between text-center bg-gray-900 rounded-2xl p-6 sm:p-8 shadow-xl rotate-y-180 backface-hidden animate-fadeIn">
+                <div className="absolute inset-0 flex flex-col items-center justify-between text-center bg-gray-900/95 rounded-2xl p-6 sm:p-8 shadow-2xl rotate-y-180 backface-hidden animate-fadeIn">
                   <h3 className="text-lg sm:text-xl font-bold mb-3 text-white">
                     {service.title}
                   </h3>
@@ -155,7 +156,7 @@ const Services = () => {
                   </p>
                   <button
                     onClick={() => handleToggle(index)}
-                    className="mt-5 inline-flex items-center text-white font-semibold underline"
+                    className="mt-5 inline-flex items-center text-indigo-300 font-semibold underline"
                   >
                     Show Less
                   </button>
@@ -181,9 +182,9 @@ const Services = () => {
           transform: rotateY(180deg);
         }
         @keyframes borderGlow {
-          0% { box-shadow: 0 0 10px rgba(255,255,255,0.1); }
-          50% { box-shadow: 0 0 20px rgba(255,255,255,0.25); }
-          100% { box-shadow: 0 0 10px rgba(255,255,255,0.1); }
+          0% { box-shadow: 0 0 12px rgba(255,255,255,0.08); }
+          50% { box-shadow: 0 0 25px rgba(255,255,255,0.25); }
+          100% { box-shadow: 0 0 12px rgba(255,255,255,0.08); }
         }
         .animate-borderGlow {
           animation: borderGlow 3s infinite ease-in-out;
