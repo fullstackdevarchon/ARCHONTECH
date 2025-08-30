@@ -51,7 +51,7 @@ function Header() {
             { id: "hero", label: "Home", Icon: Home },
             { id: "about", label: "About", Icon: Info },
             { id: "services", label: "Services", Icon: Briefcase },
-            { id: "portfolio", label: "Portfolio", Icon: Layers },
+            // { id: "portfolio", label: "Portfolio", Icon: Layers },
             { id: "team", label: "Team", Icon: Users },
             { id: "contact", label: "Contact", Icon: Phone },
           ].map(({ id, label, Icon }) => (
@@ -99,7 +99,7 @@ function Header() {
               { id: "hero", label: "Home", Icon: Home },
               { id: "about", label: "About", Icon: Info },
               { id: "services", label: "Services", Icon: Briefcase },
-              { id: "portfolio", label: "Portfolio", Icon: Layers },
+              // { id: "portfolio", label: "Portfolio", Icon: Layers },
               { id: "team", label: "Team", Icon: Users },
               { id: "contact", label: "Contact", Icon: Phone },
             ].map(({ id, label, Icon }) => (

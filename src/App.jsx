@@ -39,9 +39,9 @@ function App() {
       </section>
 
       {/* Stats Section */}
-      <section id="stats">
+      {/* <section id="stats">
         <Stats />
-      </section>
+      </section> */}
 
       {/* Features Section */}
       <section id="features">
@@ -64,14 +64,14 @@ function App() {
       </section> */}
 
       {/* Portfolio Section */}
-      <section id="portfolio">
+      {/* <section id="portfolio">
         <Portfolio />
-      </section>
+      </section> */}
 
       {/* Testimonials Section */}
-      <section id="testimonials">
+      {/* <section id="testimonials">
         <Testimonials />
-      </section>
+      </section> */}
 
       {/* Team Section */}
       <section id="team">
