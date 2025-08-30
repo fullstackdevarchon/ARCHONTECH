@@ -119,13 +119,13 @@ function Header() {
               </Link>
             ))}
 
-            <a
+            {/* {/* <a
               href="blog.html"
               onClick={handleLinkClick}
               className="flex items-center gap-2 hover:text-blue-600 transition-transform duration-300 hover:translate-x-2"
-            >
-              <ChevronDown className="w-5 h-5" /> Blog
-            </a>
+            > */}
+              {/* <ChevronDown className="w-5 h-5" /> Blog
+            </a> */} 
 
             <Link
               to="about"
