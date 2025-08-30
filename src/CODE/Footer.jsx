@@ -165,7 +165,7 @@ const Footer = () => {
               Stay connected with ARCHON TECH on social media.
             </p>
             <div className="flex space-x-3">
-              <a
+              {/* <a
                 href="#"
                 className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-indigo-600 hover:bg-indigo-600 hover:text-white transition"
               >
@@ -176,15 +176,15 @@ const Footer = () => {
                 className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-indigo-600 hover:bg-indigo-600 hover:text-white transition"
               >
                 <FaFacebookF />
-              </a>
+              </a> */}
               <a
-                href="#"
+                href="https://www.instagram.com/archon_tech?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D"
                 className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-indigo-600 hover:bg-indigo-600 hover:text-white transition"
               >
                 <FaInstagram />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/archon-tech-66a512380"
                 className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-indigo-600 hover:bg-indigo-600 hover:text-white transition"
               >
                 <FaLinkedinIn />
